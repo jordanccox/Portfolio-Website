@@ -59,11 +59,13 @@ header {
 #website-name {
     float: right;
     margin-right: 35px;
+    margin-top: -5px;
 }
 
 #website-name a {
     font-size: 24px;
     color: mediumseagreen;
+    font-family: "Rockwell";
 }
 
 #website-name a:hover {
@@ -126,7 +128,7 @@ main h3 {
     background-color: ghostwhite;
     border: 1px solid black;
     overflow: hidden;
- }
+}
 
 .card:hover {
     background-color: darkseagreen;
@@ -136,4 +138,52 @@ main h3 {
 .column a {
     text-decoration: none;
     color: black;
+}
+
+/* Footer styling */
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 5rem;
+    background-color: ghostwhite;
+    margin-top: 20px;
+    padding: 30px 15px 20px 15px;
+    border: 1px solid black;
+}
+
+footer h4 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+footer a:hover {
+    color: darkseagreen;
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        position: relative;
+        overflow: hidden;
+    }
 }
