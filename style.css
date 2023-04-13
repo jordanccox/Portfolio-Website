@@ -1,0 +1,139 @@
+/* Reset default browser styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Apercu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Link styling */
+
+a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:hover {
+    color: darkseagreen;
+}
+
+/* Responsive navigation styling */
+
+nav a.active {
+    color: black;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: relative;
+    }
+
+    nav a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+
+nav {
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    width: 100%;
+    background-color: ghostwhite;
+    padding: 30px 15px;
+    border: 1px solid black;
+}
+
+#website-name {
+    float: right;
+    margin-right: 35px;
+}
+
+#website-name a {
+    font-size: 24px;
+    color: mediumseagreen;
+}
+
+#website-name a:hover {
+    color: darkslategray;
+}
+
+@media screen and (max-width: 650px) {
+    #website-name {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* Main element styling */
+
+main {
+    margin: 20px 40px;
+}
+
+main p {
+    min-width: 200px;
+    max-width: 450px;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 10px 20px 20px 20px;
+}
+
+main h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Main containers */
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    min-height: 200px;
+    background-color: ghostwhite;
+    border: 1px solid black;
+    overflow: hidden;
+ }
+
+.card:hover {
+    background-color: darkseagreen;
+    color: ghostwhite;
+}
+
+.column a {
+    text-decoration: none;
+    color: black;
+}
