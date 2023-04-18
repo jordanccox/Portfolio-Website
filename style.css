@@ -7,6 +7,11 @@
     font-family: Apercu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 /* Link styling */
 
 a {
@@ -25,7 +30,7 @@ nav a.active {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) { /*Fix me -- make nav bar collapse to single icon*/
     nav {
         position: relative;
     }
@@ -49,11 +54,14 @@ nav ul li {
 
 /* Header styling */
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: ghostwhite;
     padding: 30px 15px;
     border: 1px solid black;
+    z-index: 9;
 }
 
 #website-name {
@@ -103,6 +111,8 @@ main h3 {
 /* Main containers */
 
 .column {
+    position: relative; /*Need to return to fully fix this issue later -- not mobile-friendly with current navbar*/
+    top: 85px; 
     float: left;
     width: 33.33%;
     padding: 0 10px;
@@ -147,20 +157,20 @@ main h3 {
     min-height: 100vh;
 }
 
-footer {
+footer { /*Fix me -- now that header is fixed, footer moves up when scrolling -- need to change positioning to relative*/
     position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 5rem;
+    min-height: 40px;
     background-color: ghostwhite;
-    margin-top: -20px;
-    padding: 30px 15px 20px 15px;
+    padding: 0px 15px 120px 15px;
     border: 1px solid black;
 }
 
 footer h4 {
     text-align: center;
     margin-bottom: 30px;
+    margin-top:-40px;
 }
 
 footer ul {
@@ -176,5 +186,7 @@ footer ul li {
     footer {
         position: relative;
         overflow: hidden;
+        padding-bottom: 100px;
+        margin-top: 85px;
     }
 }
